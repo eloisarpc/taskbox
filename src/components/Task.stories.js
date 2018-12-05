@@ -20,6 +20,6 @@ export const actions = {
 };
 
 storiesOf('Task', module)
-  .add('default', () => <Task task={createTask({ state: 'TASK_INBOX' })} {...actions} />)
-  .add('pinned', () => <Task task={createTask({ state: 'TASK_PINNED' })} {...actions} />)
-  .add('archived', () => <Task task={createTask({ state: 'TASK_ARCHIVED' })} {...actions} />);
+  .add('default', () => <Task task={createTask({ state: 'TASK_INBOX' })} {...actions} />, { notes: 'Task default', })
+  .add('pinned', () => <Task task={createTask({ state: 'TASK_PINNED' })} {...actions} />, { notes: 'Task pinned', })
+  .add('archived', () => <Task task={createTask({ state: 'TASK_ARCHIVED' })} {...actions} />, { notes: 'Task archived', });
