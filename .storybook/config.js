@@ -5,6 +5,8 @@ import { withNotes } from '@storybook/addon-notes';
 
 import '../src/index.css';
 
+import { configureViewport } from '@storybook/addon-viewport';
+
 const req = require.context('../src', true, /.stories.js$/);
 
 function loadStories() {
@@ -14,3 +16,4 @@ function loadStories() {
 addDecorator(withNotes);
 
 configure(loadStories, module);
+
